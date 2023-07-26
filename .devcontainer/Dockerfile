@@ -1,5 +1,10 @@
 FROM mcr.microsoft.com/devcontainers/java:1-17-bullseye
 
+ARG PKG="git vim curl unzip zip sudo"
+
+RUN apt-get update \
+    && apt-get install -y ${PKG} 
+
 ARG INSTALL_MAVEN="true"
 ARG MAVEN_VERSION=""
 
