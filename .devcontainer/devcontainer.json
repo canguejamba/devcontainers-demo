@@ -3,8 +3,9 @@
 {
 	"name": "Java & PostgreSQL",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
+	"service": "workspace",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"overrideCommand": true,
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {}
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -20,7 +21,8 @@
 			"extensions": [
 				"vscjava.vscode-java-pack",
 				"vscjava.vscode-spring-initializr",
-				"vscjava.vscode-maven"
+				"vscjava.vscode-maven",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
